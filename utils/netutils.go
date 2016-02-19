@@ -98,7 +98,7 @@ func CopyURL(i *url.URL) *url.URL {
 func CopyHeaders(dst, src http.Header) {
 	for k, vv := range src {
 		for _, v := range vv {
-			dst.Add(k, v)
+			dst[k] = v
 		}
 	}
 }
