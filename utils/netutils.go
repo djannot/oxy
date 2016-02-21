@@ -2,6 +2,7 @@ package utils
 
 import (
 	"io"
+	"log"
 	"net/http"
 	"net/url"
 )
@@ -99,6 +100,7 @@ func CopyHeaders(dst, src http.Header) {
 	for k, vv := range src {
 		for _, v := range vv {
 			dst[k] = v
+			log.print(dst[k])
 		}
 	}
 }
